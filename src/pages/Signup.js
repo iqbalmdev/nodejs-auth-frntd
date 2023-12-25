@@ -13,6 +13,7 @@ const Signup = () => {
   }
 
   return (
+    
     <form className="signup" onSubmit={handleSubmit}>
       <h3>Sign Up</h3>
       
@@ -29,7 +30,7 @@ const Signup = () => {
         value={password} 
       />
 
-      <button disabled={isLoading}>Sign up</button>
+      <button disabled={isLoading}>{isLoading ? "Loading":"Sign up"}</button>
       {error && <div className="error">{error}</div>}
     </form>
   )
